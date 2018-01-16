@@ -15,7 +15,7 @@ public class RxUtils {
 
     /**
      * 通过Callable创建Observable结果对象。
-     * 这个Observable将在{@link Schedulers#computation()}线程被调用，在{@link AndroidSchedulers#mainThread()}回调结果。
+     * 这个Observable将在{@link Schedulers#io()}线程被调用，在{@link AndroidSchedulers#mainThread()}回调结果。
      */
     public static <T> Observable<T> makeModelObservable(final Callable<T> func) {
         return Observable.create(
